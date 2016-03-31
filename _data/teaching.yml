@@ -1,0 +1,34 @@
+- code: PHYS 111
+  title: Honors Mechanics
+  institution: Rice
+  role: grader
+- code: PHYS 112
+  title: Honors Electricity and Magnetism
+  institution: Rice
+  role: grader
+- code: PHYS 125
+  title: General Physics I
+  institution: Rice
+  role: teaching assistant
+- code: PHYS 126
+  title: General Physics II
+  institution: Rice
+  role: teaching assistant
+- code: CAAM 210
+  title: Introduction to Engineering Computation
+  institution: Rice
+  role: lab assistant
+- code: Ay 121
+  title: Radiative Processes
+  institution: Caltech
+  role: teaching assistant
+- code: Ay 127
+  title: Cosmology and Galaxy Formation
+  institution: Caltech
+  role: teaching assistant
+- code: Ay 190
+  title: Computational Astrophysics
+  institution: Caltech
+  role: teaching assistant
+
+

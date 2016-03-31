@@ -1,0 +1,16 @@
+# Site settings
+title: Michael W Eastwood
+email: michael.w.eastwood@gmail.com
+description: "The personal website of Michael Eastwood."
+baseurl: ""
+url: "http://mweastwood.github.io"
+github_username: mweastwood
+current_institution: California Institute of Technology
+
+collections:
+    - research
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+

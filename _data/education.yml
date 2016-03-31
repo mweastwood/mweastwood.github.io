@@ -1,0 +1,16 @@
+- level: B. S.
+  field: physics (major), computational and applied mathematics (minor)
+  institution: Rice University
+  year: 2012
+  logo: rice.png
+- level: M. S.
+  field: astrophysics
+  institution: California Institute of Technology
+  year: 2014
+  logo: caltech.png
+- level: Ph. D.
+  field: astrophysics
+  institution: California Institute of Technology
+  year: 2018 (expected)
+  logo: caltech.png
+
