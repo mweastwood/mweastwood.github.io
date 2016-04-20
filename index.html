@@ -27,9 +27,9 @@
                 <span id="my-name">{{ site.title }}</span>
                 <nav>
                     <a class="section-link" href="#research">Research</a>
-                    <a class="section-link" href="#software">Software</a>
+                    <!--<a class="section-link" href="#software">Software</a>-->
                     <a class="section-link" href="#education">Education</a>
-                    <a class="section-link" href="#teaching">Teaching</a>
+                    <!--<a class="section-link" href="#teaching">Teaching</a>-->
                 </nav>
             </div>
         </header>
@@ -56,16 +56,20 @@
         <div class="site-content">
             <section id="research">
                 <h1 class="section-title">Research</h1>
-                <div class="flex-center">
+                <div class="wrap">
                     {% assign research = site.research | sort: 'order' %}
                     {% for project in research %}
                     <div class="project">
                         <h2 class="project-title">{{ project.title }}</h2>
-                        <p>{{ project.summary }}</h2>
+                        <div class="project-banner" style="background-image: url('{{ project.banner }}');"></div>
+                        <div class="project-description">
+                            {{ project.content | markdownify }}
+                        </div>
                     </div>
                     {% endfor %}
                 </div>
             </section>
+            <!--
             <section id="software">
                 <h1 class="section-title">Software</h1>
                 <div class="codes">
@@ -81,6 +85,7 @@
                     {% endfor %}
                 </div>
             </section>
+            -->
             <section id="education">
                 <h1 class="section-title">Education</h1>
                 <div class="flex-center">
@@ -96,6 +101,7 @@
                     {% endfor %}
                 </div>
             </section>
+            <!--
             <section id="teaching">
                 <h1 class="section-title">Teaching</h1>
                 <div class="courses">
@@ -110,6 +116,7 @@
                     {% endfor %}
                 </div>
             </section>
+            -->
         </div>
         <footer>
         </footer>

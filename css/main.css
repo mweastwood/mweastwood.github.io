@@ -79,13 +79,13 @@ nav .section-link:hover {
 /* Contact Information */
 
 .contact-information {
-    min-height: 36px;
+    min-height: 46px;
     background-color: #d0d0d0;
     text-align: center;
 }
 
 .contact-information ul { list-style: none; }
-.contact-information li { display: inline; margin: 0 10px; line-height: 36px;}
+.contact-information li { display: inline; margin: 0 10px; line-height: 46px;}
 .contact-information a { color: black; text-decoration: none; }
 .contact-information a:hover { color: #13a5d6; }
 
@@ -108,10 +108,27 @@ section { clear: both; }
     border: 2px solid #d0d0d0;
 }
 
+section h2 {
+    font-size: 20px;
+    margin: 20px 0;
+}
+
 /* Research */
 
-.project { width: 512px; margin-top: 10px;}
+.project { margin-top: 40px;}
 .project-title { text-align: center; }
+.project-banner {
+    height: 400px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 20px;
+}
+.project-description p {
+    text-align: justify;
+    text-indent: 5em;
+    margin-bottom: 20px;
+}
 
 /* Software */
 
