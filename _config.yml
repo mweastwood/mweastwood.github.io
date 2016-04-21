@@ -9,6 +9,7 @@ current_institution: California Institute of Technology
 
 collections:
     - research
+    - software
 
 # Build settings
 markdown: kramdown

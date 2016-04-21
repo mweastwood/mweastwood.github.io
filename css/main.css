@@ -21,6 +21,8 @@ a         { color: #2a7ae2; text-decoration: none; }
 a:hover   { color: #000; text-decoration: underline; }
 a:visited { color: #205caa; }
 
+code { font-family: 'Roboto Mono'; }
+
 /* Utility */
 
 .wrap:before,
@@ -132,28 +134,29 @@ section h2 {
 
 /* Software */
 
-.codes {
-    width: 75%;
-    max-width: 1024px;
-    margin: 0 auto;
-    text-align: center;
-    font-size: 0;
-}
-
-.code {
-    display: inline-block;
-    vertical-align: top;
-    width: 300px;
-    margin: 20px 0;
-    padding: 0 10px;
+.software-project {
+    width: 100%;
     font-size: 16px;
+    margin-top: 20px;
+    clear: both;
 }
 
-.code a { color: black; text-decoration: none; }
-.code a:hover { color: #13a5d6; }
+.software-icon {
+    float: left;
+    width: 128px;
+    padding-bottom: 20px;
+}
 
-.code ul { list-style: none; }
-.code-name { font-size: 20px; }
+.software-description {
+    margin-left: 128px;
+    padding: 0 0 20px 20px;
+}
+
+.software-project a { color: black; text-decoration: none; }
+.software-project a:hover { color: #13a5d6; }
+.software-project ul { list-style: none; margin: -15px 0 5px 0; }
+.software-project p { text-align: justify; }
+.software-project code { font-size: 14px; }
 
 /* Education */
 

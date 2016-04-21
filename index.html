@@ -9,7 +9,7 @@
         <meta name="viewport" content="width=device-width">
         <meta name="description" content="{{ site.description }}">
         <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-        <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,700|Roboto+Mono' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
         <script>
@@ -27,7 +27,7 @@
                 <span id="my-name">{{ site.title }}</span>
                 <nav>
                     <a class="section-link" href="#research">Research</a>
-                    <!--<a class="section-link" href="#software">Software</a>-->
+                    <a class="section-link" href="#software">Software</a>
                     <a class="section-link" href="#education">Education</a>
                     <!--<a class="section-link" href="#teaching">Teaching</a>-->
                 </nav>
@@ -69,23 +69,39 @@
                     {% endfor %}
                 </div>
             </section>
-            <!--
             <section id="software">
                 <h1 class="section-title">Software</h1>
-                <div class="codes">
-                    {% for code in site.data.software %}
-                    <div class="code">
-                        <a href="{{ code.url }}">
+                <div class="wrap">
+                    {% assign software = site.software | sort: 'order' %}
+                    {% for code in software %}
+                    <div class="software-project">
+                        <img class="software-icon" src="{{ code.icon }}" width=128 height=128>
+                        <div class="software-description">
+                            <h2>{{ code.title }}</h2>
                             <ul>
-                                <li class="code-name">{{ code.name }}</li>
-                                <li class="code-description">{{ code.description }}</li>
+                                {% if code.github %}
+                                <li>
+                                    <a href="{{ code.github }}">
+                                        <i class="fa fa-github fa-fw"></i>
+                                        Github Repository
+                                    </a>
+                                </li>
+                                {% endif %}
+                                {% if code.docs %}
+                                <li>
+                                    <a href="{{ code.docs }}">
+                                        <i class="fa fa-book fa-fw"></i>
+                                        Documentation
+                                    </a>
+                                </li>
+                                {% endif %}
                             </ul>
-                        </a>
+                            {{ code.content | markdownify }}
+                        </div>
                     </div>
                     {% endfor %}
                 </div>
             </section>
-            -->
             <section id="education">
                 <h1 class="section-title">Education</h1>
                 <div class="flex-center">
