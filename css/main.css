@@ -12,179 +12,232 @@ body {
     font-size: 16px;
     line-height: 1.5;
     font-weight: 300;
-    background-color: #fdfdfd;
+    background-color: #FCF7F8;
 }
 
-h1, h2, h3, h4, h5, h6 { font-size: 100%; font-weight: 400; }
+a { text-decoration: none; }
 
-a         { color: #2a7ae2; text-decoration: none; }
-a:hover   { color: #000; text-decoration: underline; }
-a:visited { color: #205caa; }
+p a, p a:visited {
+    text-decoration: none;
+    color: #1157b2;
+}
 
-code { font-family: 'Roboto Mono'; }
+p a:hover {
+    text-decoration: underline;
+}
 
-/* Utility */
+code { font-family: 'Roboto Mono'; font-weight: 300; }
 
 .wrap:before,
 .wrap:after { content:""; display:table; }
 .wrap:after { clear: both; }
 .wrap {
-    width: 75%;
+    width: 95%;
     max-width: 1024px;
-    padding: 0 30px;
     margin: 0 auto;
+    padding: 0 16px;
     zoom: 1;
 }
 
-.flex-center {
-    width: 75%;
-    max-width: 1024px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-}
-
-/* Site header */
+.clear { clear:both; }
 
 header {
-    min-height: 56px;
-    background-color: #333;
+    min-height: 64px;
+    border-top: 4px solid transparent;
+    border-image: linear-gradient(to right, #827191 0%, #84ACCE 100%);
+    border-image-slice: 1;
 }
 
-#my-name {
+header:after {
     display: block;
-    color: white;
-    font-size: 26px;
+    height: 1px;
+    width: 100%;
+    margin: 0 auto;
+    content: "";
+    background-color: #D0D0D0;
+}
+
+header h1 {
+    display: block;
     float: left;
-    line-height: 56px;
+    line-height: 64px;
+    font-size: 24px;
+    font-weight: 300;
+    color: #000000;
+}
+
+header h1:hover {
     position: relative;
-    z-index: 1;
+    top: -1px;
+    text-shadow: 0px 1px 2px #D0D0D0;
 }
 
 nav {
     float: right;
-    line-height: 56px;
+    line-height: 64px;
 }
 
-nav .section-link {
+nav a {
     display: block;
     float: left;
-    margin: 0;
-    padding: 0 10px;
-    color: white;
+    text-align: center;
+    margin-left: 16px;
+    color: #000000;
 }
 
-nav .section-link:hover {
-    background-color: #444;
+nav a:hover {
+    position: relative;
+    top: -1px;
+    text-shadow: 0px 1px 2px #D0D0D0;
 }
 
-/* Contact Information */
-
-.contact-information {
-    min-height: 46px;
-    background-color: #d0d0d0;
+footer {
+    min-height: 64px;
+    border-top: 1px solid #D0D0D0;
     text-align: center;
 }
 
-.contact-information ul { list-style: none; }
-.contact-information li { display: inline; margin: 0 10px; line-height: 46px;}
-.contact-information a { color: black; text-decoration: none; }
-.contact-information a:hover { color: #13a5d6; }
-
-/* Sections */
-
-section { clear: both; }
-
-.section-title {
-    padding-top: 30px;
-    text-align: center;
-    font-size: 26px;
-    line-height: 40px;
+footer ul { list-style: none; }
+footer li { display: inline; margin: 0 16px; line-height: 64px;}
+footer a { color: #000000; text-decoration: none; }
+footer a:hover {
+    position: relative;
+    top: -1px;
+    text-shadow: 0px 1px 2px #D0D0D0;
 }
 
-.section-title:after {
-    display: block;
-    width: 40px;
+.fa { color: #A0A0A0; }
+
+#banner {
+    width: 100%;
+    height: 50%;
+    max-width: 100%;
     margin: 0 auto;
-    content: ' ';
-    border: 2px solid #d0d0d0;
+    background-position: center center;
+    background-size: cover;
+}
+
+#banner-bottom {
+    width: 100%;
+    height: 50%;
+    max-width: 100%;
+    margin: 0 auto;
+    background-position: center bottom;
+    background-size: cover;
+}
+
+#banner-right {
+    width: 100%;
+    height: 50%;
+    max-width: 100%;
+    margin: 0 auto;
+    background-position: right top;
+    background-size: cover;
+}
+
+section {
+    width: 90%;
+    max-width: 1024px;
+    margin: 0 auto 16px auto;
+    padding: 16px 0 1px 0;
 }
 
 section h2 {
-    font-size: 20px;
-    margin: 20px 0;
-}
-
-/* Research */
-
-.project { margin-top: 40px;}
-.project-title { text-align: center; }
-.project-banner {
-    height: 400px;
-    width: 100%;
-    background-size: cover;
-    background-position: center;
-    margin-bottom: 20px;
-}
-.project-description p {
-    text-align: justify;
-    text-indent: 5em;
-    margin-bottom: 20px;
-}
-
-/* Software */
-
-.software-project {
-    width: 100%;
-    font-size: 16px;
-    margin-top: 20px;
-    clear: both;
-}
-
-.software-icon {
-    float: left;
-    width: 128px;
-    padding-bottom: 20px;
-}
-
-.software-description {
-    margin-left: 128px;
-    padding: 0 0 20px 20px;
-}
-
-.software-project a { color: black; text-decoration: none; }
-.software-project a:hover { color: #13a5d6; }
-.software-project ul { list-style: none; margin: -15px 0 5px 0; }
-.software-project p { text-align: justify; }
-.software-project code { font-size: 14px; }
-
-/* Education */
-
-.degree { width: 256px; text-align: center;}
-.degree ul { list-style: none; }
-.degree-level { font-size: 20px; }
-.degree-year { font-weight: bold; }
-
-/* Teaching */
-
-.courses {
-    width: 75%;
-    max-width: 1024px;
-    margin: 0 auto;
+    font-size: 24px;
+    font-weight: 300;
+    color: #000000;
     text-align: center;
-    font-size: 0;
+    margin-bottom: 16px;
 }
 
-.course {
-    display: inline-block;
-    vertical-align: top;
-    width: 236px;
-    margin: 20px 0;
-    padding: 0 10px;
-    font-size: 16px;
+section h3 {
+    font-size: 18px;
+    font-weight: 300;
+    color: #000000;
+    text-align: center;
+    margin-bottom: 16px;
 }
 
-.course ul { list-style: none; }
-.course-code { font-size: 20px; }
-.course-role { font-style: italic; }
+section p {
+    text-align: justify;
+    margin-bottom: 16px;
+}
+
+section figure {
+    margin: 0 auto 32px auto;
+    text-align: center;
+}
+
+section figure img {
+    max-width: 100%;
+}
+
+section table {
+    margin: 16px auto;
+    text-align: center;
+    border-collapse: collapse;
+    border-top: 3px double #D0D0D0;
+    border-bottom: 3px double #D0D0D0;
+}
+
+section th {
+    font-weight: 400;
+    height: 24px;
+    line-height: 24px;
+    padding: 8px;
+    border-bottom: 1px solid #D0D0D0;
+}
+
+section td {
+    height: 24px;
+    line-height: 24px;
+    padding: 8px;
+}
+
+section tbody tr:hover {
+    font-weight: 400;
+    background-color: #827191;
+    color: #FFFFFF;
+}
+
+.box {
+    display: block;
+    width: 464px;
+    max-width: 100%;
+    margin: 0 8px 16px 8px;
+    padding: 16px;
+    border-radius: 2px;
+    box-shadow: 0px 2px 4px #D0D0D0;
+    float: left;
+}
+
+.box a, .box a:visited {
+    text-decoration: none;
+    color: #1157b2;
+}
+
+.box a:hover {
+    text-decoration: underline;
+}
+
+.box ul {
+    list-style-type: none;
+}
+
+.box-education {
+    display: block;
+    width: 100%;
+    height: 64px;
+    margin: 0 0 4px 0;
+    float: left;
+}
+
+.box-education img {
+    display: inline;
+    vertical-align: middle;
+}
+
+.box-education p {
+    line-height: 64px;
+}
 

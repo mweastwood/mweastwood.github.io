@@ -1,0 +1,14 @@
+---
+layout: default
+---
+
+<section>
+    {% capture text %}{% include_relative _text/julia-packages.md %}{% endcapture %}
+    {{ text | markdownify }}
+</section>
+
+<section>
+    {% capture text %}{% include_relative _text/ovro-lwa-software.md %}{% endcapture %}
+    {{ text | markdownify }}
+</section>
+

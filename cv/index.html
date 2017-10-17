@@ -1,0 +1,18 @@
+---
+layout: default
+---
+
+<section>
+    {% capture text %}{% include_relative _text/presentations.md %}{% endcapture %}
+    {{ text | markdownify }}
+</section>
+<section>
+    {% capture text %}{% include_relative _text/education.md %}{% endcapture %}
+    {{ text | markdownify }}
+</section>
+<section>
+    {% capture text %}{% include_relative _text/awards.md %}{% endcapture %}
+    {{ text | markdownify }}
+</section>
+
+
